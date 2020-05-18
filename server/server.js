@@ -13,7 +13,7 @@ let app = express();
 let server = http.createServer(app);
 let io = socketIO(server);
 let users = new Users();
-var usersa={};
+var usera={};
 var x;
 
 
