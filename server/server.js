@@ -71,7 +71,8 @@ io.on('connection', (socket) => {
 
   socket.on('createMessage', (data) => {
     let user = users.getUser(socket.id);
-	  var msg = data.trim();
+	  str=data;
+	  var msg = str.trim();
 	  if(msg.substr(0, 3)==='/w '){
 		  msg=msg.substr(3);
 		  var ind=msg.indexOf(' ');
