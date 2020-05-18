@@ -69,9 +69,9 @@ io.on('connection', (socket) => {
     callback();
   })
 
-  socket.on('createMessage', (message, callback) => {
+  socket.on('createMessage', (data, callback) => {
     let user = users.getUser(socket.id);
-	  var msg=message.trim();
+	  var msg=data.trim();
 	  if(msg.substr(0, 3)==='/w '){
 		  msg=msg.substr(3);
 		  var ind=msg.indexOf(' ');
@@ -91,7 +91,7 @@ io.on('connection', (socket) => {
 	  }
 
    else{
-        io.to(user.room).emit('newMessage', generateMessage(user.name, message.text));
+        io.to(user.room).emit('newMessage', generateMessage(user.name, data.text));
     
     
   }
