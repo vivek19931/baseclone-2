@@ -33,10 +33,10 @@ io.on('connection', (socket) => {
          
       } else {
         
-		 callback(true);
+		 
 	      socket.nickname=data;
 	      usera[socket.nickname]=socket;
-	      console.log(usera[socket.nickname]);
+	      console.log(socket);
 	      
          
 		
