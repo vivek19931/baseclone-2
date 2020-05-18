@@ -41,7 +41,7 @@ socket.on('connect', function() {
          
 		 
 		 
-		  location.replace("http://chatstepss-git-chatstep.apps.us-east-1.starter.openshift-online.com/");
+		  location.replace("/");
 		  
    })
   
