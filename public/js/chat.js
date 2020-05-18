@@ -105,7 +105,7 @@ socket.on('newMessage', function(data) {
 });
 
 socket.on('newMessagee', function(data) {
-  const formattedTime = moment(message.createdAt).format('LT');
+  const formattedTime = moment(data.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
     
