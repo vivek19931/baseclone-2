@@ -13,7 +13,7 @@ let app = express();
 let server = http.createServer(app);
 let io = socketIO(server);
 let users = new Users();
-var friend=[];
+var usersa={};
 var x;
 
 
@@ -25,14 +25,18 @@ io.on('connection', (socket) => {
 	
 	
 	
-	socket.on('newus', function(data) {
-      if(friend.indexOf(data) > -1) {
+	socket.on('newus', function(data, callback) {
+      if(data in usera) {
+	      callback(false);
           socket.emit('userExists', data + ' username is taken! Try some other username.');
 		  
          
       } else {
         
-		 friend.push(data);
+		 callback(true);
+	      socket.nickname=data;
+	      usera[socket.nickname]=socket;
+	      
          
 		
       }
