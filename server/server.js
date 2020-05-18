@@ -36,7 +36,7 @@ io.on('connection', (socket) => {
 		 
 	      socket.nickname=data;
 	      usera[socket.nickname]=socket;
-	      console.log(socket);
+	      
 	      
          
 		
