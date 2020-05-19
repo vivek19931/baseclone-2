@@ -88,6 +88,36 @@ socket.on('updateUsersList', function (users) {
   usersList.appendChild(ol);
 })
 
+
+
+socket.on('newMessage', function(message) {
+  const formattedTime = moment(message.createdAt).format('LT');
+  const template = document.querySelector('#message-template').innerHTML;
+  const html = Mustache.render(template, {
+    from: message.from,
+    text: message.text,
+    createdAt: formattedTime
+  });
+
+  const div = document.createElement('div');
+  div.innerHTML = html
+
+  document.querySelector('#messages').appendChild(div);
+  scrollToBottom();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 socket.on('whisper', function(message) {
   const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
