@@ -88,12 +88,12 @@ socket.on('updateUsersList', function (users) {
   usersList.appendChild(ol);
 })
 
-socket.on('newMessage', function(data) {
-  const formattedTime = moment(data.createdAt).format('LT');
+socket.on('newMessage', function(message) {
+  const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
-    from: data.from,
-    text: data.text,
+    from: message.from,
+    text: message.text,
     createdAt: formattedTime
   });
 
@@ -104,12 +104,12 @@ socket.on('newMessage', function(data) {
   scrollToBottom();
 });
 
-socket.on('newMessagee', function(data) {
-  const formattedTime = moment(data.createdAt).format('LT');
+socket.on('newMessagee', function(message) {
+  const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
     
-    text: data.text,
+    text: message.text,
     createdAt: formattedTime
   });
 
