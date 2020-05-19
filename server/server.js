@@ -59,7 +59,7 @@ io.on('connection', (socket) => {
 		
     users.removeUser(socket.id);
 	
-    users.addUser(socket.id, params.name, params.room);
+    users.addUser(socket.id, socket, params.room);
 
     io.to(params.room).emit('updateUsersList', users.getUserList(params.room));
     socket.emit('newMessage', generateMessage('Admin', `Welocome to ${params.room}!`));
