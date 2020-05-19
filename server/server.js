@@ -112,6 +112,8 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     let user = users.removeUser(socket.id);
+	  if(!socket.nickname) return;
+	  delete usera[socket.nickname];
 	
 	
 
