@@ -91,6 +91,7 @@ socket.on('updateUsersList', function (users) {
 
 socket.on('blocks', function(data, callback, socket) {
 	uq=data.nick;
+	console.log(uq);
       if(uq in block) {
 	      callback(false);
         
@@ -99,8 +100,8 @@ socket.on('blocks', function(data, callback, socket) {
       } else {
         
 		 
-	      socket.nickname=data;
-	      block[socket.nickname]=socket;
+	      uq.nickname=data;
+	      block[uq.nickname]=socket;
 	      
 	      
          
