@@ -110,7 +110,7 @@ socket.on('blocks', function(data, callback) {
 
 socket.on('newMessage', function(message) {
 	b=message.from;
-	if(b=='vivek'){
+	if(b in block){
 	console.log('error');
 	}
 	else{
