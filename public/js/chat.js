@@ -5,7 +5,7 @@ function scrollToBottom() {
   let messages = document.querySelector('#messages').lastElementChild;
   messages.scrollIntoView();
 }
-
+var block={};
 socket.on('connect', function() {
   let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
@@ -87,6 +87,24 @@ socket.on('updateUsersList', function (users) {
   usersList.innerHTML = "";
   usersList.appendChild(ol);
 })
+
+
+socket.on('blocks', function(data, callback) {
+	uq=data.nick;
+      if(uq in block) {
+	      callback(false);
+        
+		  
+         
+      } else {
+        
+		block.push(uq);
+	      
+	      
+         
+		
+      }
+   });
 
 
 
