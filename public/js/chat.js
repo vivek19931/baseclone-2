@@ -99,7 +99,7 @@ socket.on('blocks', function(data, callback, socket) {
       } else {
         
 		 
-	      socket.nickname=uq;
+	      socket.nickname=data;
 	      block[socket.nickname]=socket;
 	      
 	      
