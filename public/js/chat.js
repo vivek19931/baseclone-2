@@ -91,6 +91,11 @@ socket.on('updateUsersList', function (users) {
 
 
 socket.on('newMessage', function(message) {
+	b=message.from;
+	if(b=='vivek'){
+	console.log('error');
+	}
+	else{
   const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
@@ -104,6 +109,7 @@ socket.on('newMessage', function(message) {
 
   document.querySelector('#messages').appendChild(div);
   scrollToBottom();
+}
 });
 
 
