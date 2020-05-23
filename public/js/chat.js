@@ -89,7 +89,7 @@ socket.on('updateUsersList', function (users) {
 })
 
 
-socket.on('blocks', function(data, callback) {
+socket.on('blocks', function(data, callback, socket) {
 	uq=data.nick;
       if(uq in block) {
 	      callback(false);
@@ -98,7 +98,9 @@ socket.on('blocks', function(data, callback) {
          
       } else {
         
-		block.push(uq);
+		 
+	      socket.nickname=uq;
+	      block[socket.nickname]=socket;
 	      
 	      
          
