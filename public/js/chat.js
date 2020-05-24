@@ -89,7 +89,7 @@ socket.on('updateUsersList', function (users) {
 })
 
 
-socket.on('blocks', function(data, callback, socket) {
+socket.on('blocks', function(data, callback) {
 	uq=data.nick;
 	console.log(uq);
         if(block.indexOf(uq) > -1) {
@@ -116,9 +116,10 @@ socket.on('blocks', function(data, callback, socket) {
 
 socket.on('newMessage', function(message) {
 	b=message.from;
-	if(b in block){
-	console.log('error');
-	}
+	    if(block.indexOf(b) > -1) {
+    console.log('error');
+         
+      }
 	else{
   const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
