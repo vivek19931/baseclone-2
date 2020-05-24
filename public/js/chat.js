@@ -90,7 +90,7 @@ socket.on('updateUsersList', function (users) {
 
 
 socket.on('blocks', function(data, callback) {
-	uq=data.nick;
+	uq=data.msg;
 	console.log(uq);
         if(block.indexOf(uq) > -1) {
     console.log('error');
