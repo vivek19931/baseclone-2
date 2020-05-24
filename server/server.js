@@ -95,6 +95,47 @@ io.on('connection', (socket) => {
 			  callback('ee');
 		  }
 	  }
+	  
+	    if(msg.substr(0, 3)==='/u '){
+		  msg=msg.substr(3);
+		  var ind=msg.indexOf(' ');
+		  if(ind !== -1){
+			  var name=msg.substring(0, ind);
+			  var msg=msg.substring(ind + 1);
+			  if(name in usera){
+				 
+			
+				    socket.emit('unblocks', {msg: msg, nick: socket.nickname});
+				  console.log('whisper');
+			  }
+			  else{
+				  callback('e');}
+		  }
+		  else{ 
+			  callback('ee');
+		  }
+	  }
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 
    else{
         io.to(user.room).emit('newMessage', generateMessage(user.name, message.text));
