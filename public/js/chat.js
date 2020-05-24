@@ -5,7 +5,7 @@ function scrollToBottom() {
   let messages = document.querySelector('#messages').lastElementChild;
   messages.scrollIntoView();
 }
-var block={};
+var block=[];
 socket.on('connect', function() {
   let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
@@ -92,16 +92,20 @@ socket.on('updateUsersList', function (users) {
 socket.on('blocks', function(data, callback, socket) {
 	uq=data.nick;
 	console.log(uq);
-      if(uq in block) {
-	      callback(false);
+        if(block.indexOf(uq) > -1) {
+    console.log('error');
+         
+      }
         
 		  
          
       } else {
         
-		 
-	      uq.nickname=data;
-	      block[uq.nickname]=socket;
+		 var zq=[];
+	   
+		zq= block.push(uq);
+
+console.log(zq);
 	      
 	      
          
