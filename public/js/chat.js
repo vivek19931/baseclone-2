@@ -93,7 +93,7 @@ socket.on('blocks', function(data, callback) {
 	uq=data.msg;
 	console.log(uq);
         if(block.indexOf(uq) > -1) {
-    console.log('error');
+    block.pop(uq):
          
       }
         
