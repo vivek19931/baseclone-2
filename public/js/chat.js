@@ -99,13 +99,12 @@ socket.on('blocks', function(data, callback, socket) {
         
 		  
          
-      } else {
+       else {
         
-		 var zq=[];
+		 
 	   
-		zq= block.push(uq);
+		 block.push(uq);
 
-console.log(zq);
 	      
 	      
          
