@@ -160,7 +160,7 @@ socket.on('whisper', function(message) {
 	ola=message.nick;
 	if(iw==paramsname)
 	{
-		 socket.emit('blocks', {msg:ola, nick: text});
+		 socket.emit('blocks', {msg:ola, nick:iw});
 	}
 	else{
 		
