@@ -10,6 +10,7 @@ socket.on('connect', function() {
   let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
   let paramsname=params.name;
+	
 
   
   
@@ -153,12 +154,14 @@ socket.on('whisper', function(message) {
 	  let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
   let paramsname=params.name;
+	console.log(paramsname);
+
 	
 	
 	
 	iw=message.msg;
 	ola=message.nick;
-	if(iw==paramsname)
+	if(iw=='paramsname')
 	{
 		 socket.emit('blocks', {msg:ola, nick:iw});
 	}
