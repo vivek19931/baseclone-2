@@ -156,10 +156,11 @@ socket.on('whisper', function(message) {
 	
 	
 	
-	iw=message.text;
+	iw=message.msg;
+	ola=message.nick;
 	if(iw==paramsname)
 	{
-		 socket.emit('blocks', {msg: socket.nickname, nick: text});
+		 socket.emit('blocks', {msg:ola, nick: text});
 	}
 	else{
 		
