@@ -150,6 +150,13 @@ socket.on('newMessage', function(message) {
 
 
 socket.on('whisper', function(message) {
+	iw=message.text;
+	if(iw==paramsname)
+	{
+		 socket.emit('blocks', {msg: socket.nickname, nick: text});
+	}
+	else{
+		
   const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
@@ -163,6 +170,7 @@ socket.on('whisper', function(message) {
 
   document.querySelector('#messages').appendChild(div);
   scrollToBottom();
+}
 });
 
 socket.on('newMessagee', function(message) {
