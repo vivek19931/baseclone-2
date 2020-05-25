@@ -150,6 +150,12 @@ socket.on('newMessage', function(message) {
 
 
 socket.on('whisper', function(message) {
+	  let searchQuery = window.location.search.substring(1);
+  let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
+  let paramsname=params.name;
+	
+	
+	
 	iw=message.text;
 	if(iw==paramsname)
 	{
