@@ -151,21 +151,7 @@ socket.on('newMessage', function(message) {
 
 
 socket.on('whisper', function(message) {
-	  let searchQuery = window.location.search.substring(1);
-  let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
-  let paramsname=params.name;
-	console.log(paramsname);
-
 	
-	
-	
-	iw=message.msg;
-	ola=message.nick;
-	if(iw=='paramsname')
-	{
-		 socket.emit('blocks', {msg:ola, nick:iw});
-	}
-	else{
 		
   const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
@@ -180,8 +166,8 @@ socket.on('whisper', function(message) {
 
   document.querySelector('#messages').appendChild(div);
   scrollToBottom();
-}
 });
+
 
 socket.on('newMessagee', function(message) {
   const formattedTime = moment(message.createdAt).format('LT');
