@@ -288,7 +288,7 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
   e.preventDefault();
 
   socket.emit("createMessage", {
-    text: document.querySelector('input[name="message"]').value;
+    text: document.querySelector('input[name="message"]').value,
 	  image: document.querySelector('input[name="image"]').value
   }, function() {
     document.querySelector('input[name="message"]').value = '';
