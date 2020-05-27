@@ -1,10 +1,11 @@
 const moment = require('moment');
 
-let generateMessage = (from, text,image) => {
+let generateMessage = (from, text,image,links) => {
   return {
     from,
     text,
     image,
+    links,
     createdAt: moment().valueOf()
   };
 };
