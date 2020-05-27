@@ -20,6 +20,7 @@
       <div class="chat__footer">
         <form id="message-form">
           <input name="message" type="text" placeholder="Message" autofocus autocomplete="off"/>
+          <input name="image" type="text" placeholder="Message" autofocus autocomplete="off"/>
           <button id="submit-btn">Send</button>
         </form>
         
@@ -37,35 +38,18 @@
      
           
         </div>
-      </li>
-    </script>
-    
-    
-    <div class="chat__main">
-      <ol id="messages" class="chat__messages"></ol>
-
-      <div class="chat__footer">
-        <form id="message-form">
-          <input name="images" type="text" placeholder="send image here" autofocus autocomplete="off"/>
-          <button id="submit-btn">Send</button>
-        </form>
-        
-      </div>
-    </div>
-
-    <script id="message-template2" type="text/template">
-      <li class="message">
-        <div class="message__title">
-          <h4>{{from}}</h4>
-          <span>{{createdAt}}</span>
-        </div>
-        <div class="message__body">
-        <p><img src"{{text}}" height="200px" width="200px"</p>
+          <div class="message__body">
+        <p><img src="{{image}}"  height="200px" width="200px"</p>
      
           
         </div>
+        
+        
       </li>
     </script>
+    
+    
+    
     
     
     
