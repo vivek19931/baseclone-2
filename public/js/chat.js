@@ -231,6 +231,24 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
   });
 })
 
+document.querySelector('#submit-btn2').addEventListener('click', function(e) {
+  e.preventDefault();
+
+  socket.emit("imagelinks", {
+    text: document.querySelector('input[name="links"]').value
+  }, function() {
+    document.querySelector('input[name="links"]').value = '';
+	 
+  });
+})
+
+
+
+
+
+
+
+
 document.querySelector('#send-location').addEventListener('click', function(e) {
   if (!navigator.geolocation) {
     return alert('Geolocation is not supported by your browser.')
