@@ -299,9 +299,9 @@ document.querySelector('#submit-btn2').addEventListener('click', function(e) {
   e.preventDefault();
 
   socket.emit("imagelinks", {
-    text: document.querySelector('input[name="links"]').value
+    text: document.querySelector('input[name="images"]').value
   }, function() {
-    document.querySelector('input[name="links"]').value = '';
+    document.querySelector('input[name="images"]').value = '';
 	 
   });
 })
