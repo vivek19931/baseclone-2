@@ -237,7 +237,7 @@ socket.on('newMessagee', function(message) {
   const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
-    
+    image:message.image,
     text: message.text,
     createdAt: formattedTime
   });
@@ -289,22 +289,14 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 
   socket.emit("createMessage", {
     text: document.querySelector('input[name="message"]').value
+	  image: document.querySelector('input[name="image"]').value
   }, function() {
     document.querySelector('input[name="message"]').value = '';
+	    document.querySelector('input[name="image"]').value = '';
 	 
   });
 })
 
-document.querySelector('#submit-btn2').addEventListener('click', function(e) {
-  e.preventDefault();
-
-  socket.emit("imagelinks", {
-    text: document.querySelector('input[name="images"]').value
-  }, function() {
-    document.querySelector('input[name="images"]').value = '';
-	 
-  });
-})
 
 
 
