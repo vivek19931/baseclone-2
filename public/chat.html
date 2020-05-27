@@ -22,7 +22,7 @@
           <input name="message" type="text" placeholder="Message" autofocus autocomplete="off"/>
           <button id="submit-btn">Send</button>
         </form>
-        <button id="send-location">Send location</button>
+        
       </div>
     </div>
 
@@ -33,23 +33,78 @@
           <span>{{createdAt}}</span>
         </div>
         <div class="message__body">
-        <p><img src="{{text}}" width="100px" height="100px"></p>
+        <p><"{{text}}"></p>
      
           
         </div>
       </li>
     </script>
 
-    <script id="location-message-template" type="text/template">
+    
+      
+      <div class="chat__main">
+      <ol id="links" class="chat__messages"></ol>
+
+      <div class="chat__footer">
+        <form id="message-form">
+          <input name="links" type="text" placeholder="Message" autofocus autocomplete="off"/>
+          <button id="submit-btn2">Send</button>
+        </form>
+        
+      </div>
+    </div>
+
+    <script id="message-template" type="text/template">
       <li class="message">
         <div class="message__title">
           <h4>{{from}}</h4>
           <span>{{createdAt}}</span>
         </div>
         <div class="message__body">
-          <a href="{{url}}" target="_blank">My current location</a>
+        <p><img src="{{text}}" width="200px" height="200px"></p>
+     
+          
         </div>
       </li>
+    </script>
+
+ 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     </script>
 
     <script src="/socket.io/socket.io.js"></script>
