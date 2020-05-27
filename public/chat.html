@@ -33,79 +33,87 @@
           <span>{{createdAt}}</span>
         </div>
         <div class="message__body">
-        <p><"{{text}}"></p>
+        <p>"{{text}}"</p>
      
           
         </div>
       </li>
     </script>
-
     
-      
-      <div class="chat__main">
-      <ol id="links" class="chat__messages"></ol>
+    
+    <div class="chat__main">
+      <ol id="messages" class="chat__messages"></ol>
 
       <div class="chat__footer">
         <form id="message-form">
-          <input name="links" type="text" placeholder="Message" autofocus autocomplete="off"/>
-          <button id="submit-btn2">Send</button>
+          <input name="images" type="text" placeholder="send image here" autofocus autocomplete="off"/>
+          <button id="submit-btn">Send</button>
         </form>
         
       </div>
     </div>
 
-    <script id="message-template" type="text/template">
+    <script id="message-template2" type="text/template">
       <li class="message">
         <div class="message__title">
           <h4>{{from}}</h4>
           <span>{{createdAt}}</span>
         </div>
         <div class="message__body">
-        <p><img src="{{text}}" width="200px" height="200px"></p>
+        <p><img src"{{text}}" height="200px" width="200px"</p>
      
           
         </div>
       </li>
     </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
- 
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    </script>
+    
+  
 
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="/js/chat.js"></script>
