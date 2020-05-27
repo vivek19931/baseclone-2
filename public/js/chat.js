@@ -125,8 +125,11 @@ socket.on('newMessage', function(message) {
   const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
+    
     from: message.from,
     text: message.text,
+	  image:message.image,
+	  
     createdAt: formattedTime
   });
 
@@ -233,21 +236,6 @@ socket.on('whisper', function(message) {
 });
 
 
-socket.on('newMessagee', function(message) {
-  const formattedTime = moment(message.createdAt).format('LT');
-  const template = document.querySelector('#message-template').innerHTML;
-  const html = Mustache.render(template, {
-    image:message.image,
-    text: message.text,
-    createdAt: formattedTime
-  });
-
-  const div = document.createElement('div');
-  div.innerHTML = html
-
-  document.querySelector('#messages').appendChild(div);
-  scrollToBottom();
-});
 
 
 
@@ -266,16 +254,7 @@ socket.on('newMessagee', function(message) {
 
 
 
-socket.on('newLocationMessage', function(message) {
-  const formattedTime = moment(message.createdAt).format('LT');
-  console.log("newLocationMessage", message);
 
-  const template = document.querySelector('#location-message-template').innerHTML;
-  const html = Mustache.render(template, {
-    from: message.from,
-    url: message.url,
-    createdAt: formattedTime
-  });
 
   const div = document.createElement('div');
   div.innerHTML = html
