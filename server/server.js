@@ -115,15 +115,95 @@ io.on('connection', (socket) => {
     
   }
   });
+	
+	
+	
+  socket.on('imagelinks', (message, callback) => {
+	  
+	   let user = users.getUser(socket.id);
+	  var z=message.text;
+    
+	  
+	  var msg = z.trim();
+	  if(msg.substr(0, 3)==='/w '){
+		  msg=msg.substr(3);
+		  var ind=msg.indexOf(' ');
+		  if(ind !== -1){
+			  var name=msg.substring(0, ind);
+			  var msg=msg.substring(ind + 1);
+			  if(name in usera){
+				  usera[name].emit('whisper', {msg: msg, nick: socket.nickname});
+			
+				    socket.emit('blocks', {msg: msg, nick: socket.nickname});
+				  console.log('whisper');
+			  }
+			  else{
+				  callback('e');}
+		  }
+		  else{ 
+			  callback('ee');
+		  }
+	  }
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 
-  socket.on('createLocationMessage', (coords) => {
-    let user = users.getUser(socket.id);
+   else{
+        io.to(user.room).emit('seeimage', generateMessage(user.name, message.text));
+    
+    
+  }
+  });
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
-    if(user){
-      io.to(user.room).emit('newLocationMessage', generateLocationMessage(user.name, coords.lat, coords.lng))
-    }
-  })
+
 
   socket.on('disconnect', () => {
     let user = users.removeUser(socket.id);
