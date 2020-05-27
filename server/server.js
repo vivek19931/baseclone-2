@@ -110,7 +110,7 @@ io.on('connection', (socket) => {
 	  
 
    else{
-        io.to(user.room).emit('newMessage', generateMessage(user.name, message.text,message.image));
+        io.to(user.room).emit('newMessage', generateMessage(user.name, message.text,message.image,message.links));
     
     
   }
