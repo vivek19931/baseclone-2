@@ -20,7 +20,8 @@
       <div class="chat__footer">
         <form id="message-form">
           <input name="message" type="text" placeholder="Message" autofocus autocomplete="off"/>
-          <input name="image" type="text" placeholder="Message" autofocus autocomplete="off"/>
+          <input name="image" type="text" placeholder="Send Image Link Here" autofocus autocomplete="off"/>
+          <input name="links" type="url" placeholder="Send Room Link Here Link Here" autofocus autocomplete="off"/>
           <button id="submit-btn">Send</button>
         </form>
         
@@ -41,6 +42,15 @@
         </div>
           <div class="message__body">
         <p><img src="{{image}}"  height="200px" width="200px" alt="" ></p>
+     
+          
+        </div>
+        
+        
+        
+        
+            <div class="message__body">
+        <p><a href="{{links}}"  target="blank"  ></p>
      
           
         </div>
