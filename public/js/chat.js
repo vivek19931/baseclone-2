@@ -145,28 +145,6 @@ socket.on('newMessage', function(message) {
 
 
 
-socket.on('seeimage', function(message) {
-	b=message.from;
-	    if(block.indexOf(b) > -1) {
-    console.log('error');
-         
-      }
-	else{
-  const formattedTime = moment(message.createdAt).format('LT');
-  const template = document.querySelector('#message-template2').innerHTML;
-  const html = Mustache.render(template, {
-    from: message.from,
-    text: message.text,
-    createdAt: formattedTime
-  });
-
-  const div = document.createElement('div');
-  div.innerHTML = html
-
-  document.querySelector('#messages').appendChild(div);
-  scrollToBottom();
-}
-});
 
 
 
@@ -256,12 +234,7 @@ socket.on('whisper', function(message) {
 
 
 
-  const div = document.createElement('div');
-  div.innerHTML = html
 
-  document.querySelector('#messages').appendChild(div);
-  scrollToBottom();
-});
 
 document.querySelector('#submit-btn').addEventListener('click', function(e) {
   e.preventDefault();
