@@ -252,7 +252,7 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 	  document.querySelector('input[name="space"]').value = '';
 	 
   })
-})
+});
 
 
 
