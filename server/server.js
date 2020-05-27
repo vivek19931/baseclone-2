@@ -110,61 +110,14 @@ io.on('connection', (socket) => {
 	  
 
    else{
-        io.to(user.room).emit('newMessage', generateMessage(user.name, message.text));
+        io.to(user.room).emit('newMessage', generateMessage(user.name, message.text,message.image));
     
     
   }
   });
 	
 	
-	
-  socket.on('imagelinks', (message, callback) => {
-	  
-	   let user = users.getUser(socket.id);
-	  var z=message.text;
-    
-	  
-	  var msg = z.trim();
-	  if(msg.substr(0, 3)==='/w '){
-		  msg=msg.substr(3);
-		  var ind=msg.indexOf(' ');
-		  if(ind !== -1){
-			  var name=msg.substring(0, ind);
-			  var msg=msg.substring(ind + 1);
-			  if(name in usera){
-				  usera[name].emit('whisper', {msg: msg, nick: socket.nickname});
-			
-				    socket.emit('blocks', {msg: msg, nick: socket.nickname});
-				  console.log('whisper');
-			  }
-			  else{
-				  callback('e');}
-		  }
-		  else{ 
-			  callback('ee');
-		  }
-	  }
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
 
-   else{
-        io.to(user.room).emit('seeimage', generateMessage(user.name, message.text));
-    
-    
-  }
-  });
-	
 	
 	
 	
