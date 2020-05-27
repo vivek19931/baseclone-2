@@ -246,10 +246,10 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 	  links: document.querySelector('input[name="links"]').value,
 	   space: document.querySelector('input[name="space"]').value,
   }, function() {
-    document.querySelector('input[name="message"]').value = '1';
-	    document.querySelector('input[name="image"]').value = '1';
-	  document.querySelector('input[name="links"]').value = '1';
-	  document.querySelector('input[name="space"]').value = '1';
+    document.querySelector('input[name="message"]').value = '';
+	    document.querySelector('input[name="image"]').value = '';
+	  document.querySelector('input[name="links"]').value = '';
+	  document.querySelector('input[name="space"]').value = ''
 	 
   });
 })
