@@ -150,7 +150,7 @@ socket.on('seeimage', function(message) {
       }
 	else{
   const formattedTime = moment(message.createdAt).format('LT');
-  const template = document.querySelector('#message-template').innerHTML;
+  const template = document.querySelector('#message-template2').innerHTML;
   const html = Mustache.render(template, {
     from: message.from,
     text: message.text,
@@ -160,7 +160,7 @@ socket.on('seeimage', function(message) {
   const div = document.createElement('div');
   div.innerHTML = html
 
-  document.querySelector('#links').appendChild(div);
+  document.querySelector('#messages').appendChild(div);
   scrollToBottom();
 }
 });
