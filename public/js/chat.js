@@ -245,31 +245,18 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 	  image: document.querySelector('input[name="image"]').value,
 	  links: document.querySelector('input[name="links"]').value,
 	   space: document.querySelector('input[name="space"]').value,
-  }, function() {
+  }
+});
+	function empty(){
     document.querySelector('input[name="message"]').value = '';
 	    document.querySelector('input[name="image"]').value = '';
 	  document.querySelector('input[name="links"]').value = '';
 	  document.querySelector('input[name="space"]').value = '';
 	 
   })
-})
+  empty();
+		
 
-
-
-document.querySelector('#send-location').addEventListener('click', function(e) {
-  if (!navigator.geolocation) {
-    return alert('Geolocation is not supported by your browser.')
-  }
-
-  navigator.geolocation.getCurrentPosition(function(position) {
-    socket.emit('createLocationMessage', {
-      lat: position.coords.latitude,
-      lng: position.coords.longitude
-    })
-  }, function() {
-    alert('Unable to fetch location.')
-  })
-});
 
 
 
