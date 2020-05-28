@@ -21,11 +21,13 @@
         <form id="message-form">
           <input name="message" id="empty" type="text" placeholder="Message" autofocus autocomplete="off" onfocus="this.value=''" value=""  />
     
-          <input name="links" type="url" placeholder="Send Room Link Here Link Here" autofocus autocomplete="off" onfocus="this.value=''" value=""/>
+          <input name="links" type="url" id="url" placeholder="Send Room Link Here Link Here" autofocus autocomplete="off" onfocus="this.value=''" value=""/>
           
-            <input name="image" type="text" placeholder="Send Image Link Here" autofocus autocomplete="off" value="" onfocus="this.value=''" value=""/>
+            <input name="image" type="text" id="text" placeholder="Send Image Link Here" autofocus autocomplete="off" value="" onfocus="this.value=''" value=""/>
            <input name="space" type="hidden" placeholder="Send Image Link Here" autofocus autocomplete="off" value="" onfocus="this.value=''" value="Blabla"/>
-          <button id="submit-btn" onclick="document.getElementById('empty').value = ''">Send</button>
+          <button id="submit-btn">Send</button>
+          <button onclick="document.getElementById('empty','url','image').value = ''">Clear input field</button>
+
         </form>
         
       </div>
