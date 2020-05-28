@@ -171,7 +171,14 @@ io.on('connection', (socket) => {
     }
   });
 });
-
+	function empty(){
+    document.querySelector('input[name="message"]').value = '';
+	    document.querySelector('input[name="image"]').value = '';
+	  document.querySelector('input[name="links"]').value = '';
+	  document.querySelector('input[name="space"]').value = ''
+	 
+  }
+  empty();
 
 
 server.listen(port, ()=>{
