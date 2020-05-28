@@ -247,14 +247,7 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 	   space: document.querySelector('input[name="space"]').value,
   })
 });
-	function empty(){
-    document.querySelector('input[name="message"]').value = '';
-	    document.querySelector('input[name="image"]').value = '';
-	  document.querySelector('input[name="links"]').value = '';
-	  document.querySelector('input[name="space"]').value = ''
-	 
-  }
-  empty();
+
 		
 
 
