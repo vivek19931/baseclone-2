@@ -203,7 +203,7 @@ socket.on('whisper', function(message) {
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
     from: message.nick,
-    text: message.msg,
+    links: message.msg,
     createdAt: formattedTime
   });
 
