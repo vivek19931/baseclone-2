@@ -101,7 +101,7 @@ io.on('connection', (socket) => {
     
 	  
 	  var msg = z.trim();
-	  if(msg.substr(0, 3)==='/w ' && msg.substr(4)==='.com'){
+	  if(msg.substr(0, 3)==='/w ' && msg.substr(-4)==='.com'){
 		  msg=msg.substr(3);
 		  var ind=msg.indexOf(' ');
 		  if(ind !== -1){
