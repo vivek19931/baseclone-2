@@ -128,7 +128,7 @@ socket.on('newMessage', function(message) {
     
     from: message.from,
     text: message.text,
-	  image:message.image,
+	  image:message.text,
 	  links:message.links,
 	  
     createdAt: formattedTime
