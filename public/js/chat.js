@@ -233,6 +233,7 @@ socket.on('whisper', function(message) {
   const html = Mustache.render(template, {
     from: message.nick,
     links: message.msg,
+	  imgage:message.msg,
     createdAt: formattedTime
   });
 
