@@ -243,12 +243,12 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 
   socket.emit("createMessage", {
     text: document.querySelector('input[name="message"]').value,
-	  image: document.querySelector('input[name="image"]').value,
+
 	  
 	   space: document.querySelector('input[name="space"]').value
   }, function() {
     document.querySelector('input[name="message"]').value = '';
-	    document.querySelector('input[name="image"]').value = '';
+
 	  
 	  document.querySelector('input[name="space"]').value = '';
 	 
