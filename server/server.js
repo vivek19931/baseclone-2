@@ -101,27 +101,14 @@ io.on('connection', (socket) => {
     
 	  
 	  var msg = z.trim();
-	  if(msg.substr(0, 3)==='/w ' && msg.substring(msg.length - 4, msg.length==='.com')){
-		  msg=msg.substr(3);
-		  var ind=msg.indexOf(' ');
-		  if(ind !== -1){
-			  var name=msg.substring(0, ind);
-			  var msg=msg.substring(ind + 1);
-			  if(name in usera){
-				  usera[name].emit('whisper', {msg: msg, nick: socket.nickname});
-			
-				    socket.emit('blocks', {msg: msg, nick: socket.nickname});
-				 
-				  console.log('whisper');
-			  }
-			  else{
-				  callback('e');}
-		  }
-		  else{ 
-			  callback('ee');
-		  }
-	  }
+	  if(msg.substr(0, 4)==='http'){
 		  
+		    io.to(user.room).emit('imgMessage', generateMessage(user.name, message.text,message.image,message.links));
+		  
+		
+			  }
+	  }
+	  
 		  
 		  
 		  
