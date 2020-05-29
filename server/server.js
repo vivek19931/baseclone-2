@@ -107,8 +107,8 @@ io.on('connection', (socket) => {
 		  
 		
 			  }
-	  }
 	  
+ 
 		  
 		  
 		  
