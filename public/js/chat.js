@@ -351,6 +351,25 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 
 
 
+document.querySelector('input[name="message"]').addEventListener('onkeypress', function(e) {
+  e.preventDefault();
+
+  socket.emit("type", {
+    text: "is typing"
+
+	  
+	   
+  }
+    
+
+	 
+  })
+
+
+
+
+
+
 
 
 
