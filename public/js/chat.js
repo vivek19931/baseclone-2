@@ -147,7 +147,9 @@ socket.on('newMessage', function(message) {
 });
 
 
-socket.on('newMessages', function(message) {
+
+
+socket.on('typing', function(message) {
 	b=message.from;
 	    if(block.indexOf(b) > -1) {
     console.log('error');
@@ -159,7 +161,7 @@ socket.on('newMessages', function(message) {
   const html = Mustache.render(template, {
     
     from: message.from,
-    text: message.from,
+    text: message.text,
  color:message.color,
 	  
 	  links:message.links,
@@ -174,6 +176,10 @@ socket.on('newMessages', function(message) {
   scrollToBottom();
 }
 });
+
+
+
+
 
 
 
