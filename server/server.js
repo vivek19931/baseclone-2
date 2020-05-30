@@ -24,6 +24,7 @@ var x;
 app.use(express.static(publicPath));
 
 io.on('connection', (socket) => {
+	 socket.color = color; 
 	
 	socket.emit('newMessagee', (socket.id));
 	
@@ -37,7 +38,7 @@ io.on('connection', (socket) => {
 		  
          
       } else {
-        socket.color = color; 
+       
 		
 	      socket.nickname=data;
 	      usera[socket.nickname]=socket;
