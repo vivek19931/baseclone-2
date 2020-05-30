@@ -156,7 +156,8 @@ socket.on('imgMessage', function(message) {
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
     
-    from: message.color,
+    from: message.from,
+	  color:message.color,
     
 	  image:message.text,
 	  links:message.links,
