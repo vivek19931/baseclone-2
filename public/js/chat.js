@@ -347,14 +347,8 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 
 	  
 	  
-  },
- function() {
-    document.querySelector('input[name="message"]').value = '';
-
-	  
-	  
-	 
   })
+ 
 })
 
 
