@@ -79,8 +79,9 @@ socket.on('updateUsersList', function (users) {
   let ol = document.createElement('ol');
 
   users.forEach(function (user) {
+	  var x=user.color;
     let li = document.createElement('li');
-    li.innerHTML = user;
+    li.innerHTML = `<li class="list-item" style="color: ${user.color}">${data[i].user.name}</li>`;
     ol.appendChild(li);
   });
 
