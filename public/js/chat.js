@@ -361,7 +361,7 @@ document.querySelector('input[name="message"]').addEventListener('onkeypress', f
   e.preventDefault();
 
   socket.emit("type", {
-    text: "is typing";
+    text: "is typing"
 
 	  
 	   
