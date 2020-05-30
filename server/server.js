@@ -10,6 +10,7 @@ const {Users} = require('./utils/users');
 const publicPath = path.join(__dirname, '/../public');
 const port = process.env.PORT || 8080
 let app = express();
+let randomColor = require('randomcolor');
 let server = http.createServer(app);
 let io = socketIO(server);
 let users = new Users();
