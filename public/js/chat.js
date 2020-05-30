@@ -354,7 +354,8 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 
 
 
-function empty() {
+function empty(e) {
+e.preventDefault();
     document.querySelector('input[name="message"]').value = '';
 
 	  
