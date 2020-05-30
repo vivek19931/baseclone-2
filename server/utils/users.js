@@ -11,7 +11,7 @@ class Users {
   }
 
   addUser(id, name, room) {
-    let user = {id, name, room};
+    let user = {id, name, room,color};
     this.users.push(user);
     return user;
   }
