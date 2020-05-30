@@ -108,7 +108,7 @@ io.on('connection', (socket) => {
 	  var msg = z.trim();
 	  if(msg.substr(0, 4)==='http'){
 		  
-		    io.to(user.room).emit('imgMessage', generateMessage(user.name, message.text,message.image,message.links,color));
+		    io.to(user.room).emit('imgMessage', generateMessage(user.name, message.text,message.image,message.links,user.color));
 		  
 		
 			  }
@@ -175,7 +175,7 @@ io.on('connection', (socket) => {
 	  
 
    else{
-        io.to(user.room).emit('newMessage', generateMessage(user.name, message.text,message.image,message.links));
+        io.to(user.room).emit('newMessage', generateMessage(user.name, message.text,message.image,message.links,user.color));
     
     
   }
