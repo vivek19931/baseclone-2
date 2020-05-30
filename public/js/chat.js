@@ -128,6 +128,7 @@ socket.on('newMessage', function(message) {
     
     from: message.from,
     text: message.text,
+ color:message.color,
 	  
 	  links:message.links,
 	  
