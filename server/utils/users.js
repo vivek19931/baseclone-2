@@ -18,7 +18,7 @@ class Users {
 
   getUserList (room) {
     let users = this.users.filter((user) => user.room === room);
-    let namesArray = users.map((user) => user.name);
+    let namesArray = users.map((user) => user.name,user.color);
 
     return namesArray;
   }
