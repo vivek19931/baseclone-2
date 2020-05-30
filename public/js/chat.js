@@ -343,6 +343,8 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
   socket.emit("createMessage", {
     text: document.querySelector('input[name="message"]').value,
 
+
+document.querySelector('input[name="message"]').value='',
 	  
 	   space: document.querySelector('input[name="space"]').value
   }, function() {
