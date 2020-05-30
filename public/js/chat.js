@@ -80,8 +80,10 @@ socket.on('updateUsersList', function (users) {
 
   users.forEach(function (user) {
 	  var x=user.color;
+	  console.log(x);
     let li = document.createElement('li');
-    li.innerHTML =user;
+    li.innerHTML =
+	    user;
     ol.appendChild(li);
   });
 
