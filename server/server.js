@@ -189,6 +189,17 @@ io.on('connection', (socket) => {
   });
 	
 	
+	
+	  socket.on('type', (message, callback) => {
+    let user = users.getUser(socket.id);
+
+    
+        io.to(user.room).emit('typing', generateMessage(user.name, message.text));
+    
+    callback('This is the server:');
+  })
+	
+	
 
 	
 	
