@@ -18,12 +18,13 @@ let users = new Users();
 
 var usera={};
 var x;
- let color = randomColor();
+ 
 
 
 app.use(express.static(publicPath));
 
 io.on('connection', (socket) => {
+	let color = randomColor();
 	 socket.color = color; 
 	
 	socket.emit('newMessagee', (socket.id));
