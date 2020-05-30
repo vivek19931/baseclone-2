@@ -365,7 +365,7 @@ document.querySelector('input[name="message"]').addEventListener('onkeypress', f
 
 	  
 	   
-  }
+  })
     
 
 	 
