@@ -2,6 +2,7 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
+let randomColor = require('randomColor');
 
 const {generateMessage, generateLocationMessage} = require('./utils/message');
 const {isRealString} = require('./utils/isRealString');
@@ -14,7 +15,7 @@ let app = express();
 let server = http.createServer(app);
 let io = socketIO(server);
 let users = new Users();
-let randomColor = require('randomColor');
+
 var usera={};
 var x;
  let color = randomColor();
