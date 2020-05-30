@@ -10,7 +10,7 @@
 
     <div class="chat__sidebar">
       <h3>People</h3>
-      <div style='color:color' class="chat-text user-nickname" id="users"></div>
+      <div style='color:color' id="users"></div>
     </div>
     <h></h>
 
@@ -36,7 +36,7 @@
     <script id="message-template" type="text/template">
       <li class="message">
         <div class="message__title">
-          <p style='color:{{color}}' class="chat-text user-nickname"> {{from}}</p>
+          <p style='color:{{color}}'> {{from}}</p>
           <span>{{createdAt}}</span>
         </div>
         <div class="message__body">
