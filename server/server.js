@@ -26,6 +26,7 @@ app.use(express.static(publicPath));
 io.on('connection', (socket) => {
 	
 	socket.emit('newMessagee', (socket.id));
+	socket.color = color; 
 	
 	
 	
@@ -37,7 +38,7 @@ io.on('connection', (socket) => {
          
       } else {
         
-		socket.color = color; 
+		
 	      socket.nickname=data;
 	      usera[socket.nickname]=socket;
 	      
@@ -107,7 +108,7 @@ io.on('connection', (socket) => {
 	  var msg = z.trim();
 	  if(msg.substr(0, 4)==='http'){
 		  
-		    io.to(user.room).emit('imgMessage', generateMessage(user.name, message.text,message.image,message.links,socket.color));
+		    io.to(user.room).emit('imgMessage', generateMessage(user.name, message.text,message.image,message.links,color));
 		  
 		
 			  }
