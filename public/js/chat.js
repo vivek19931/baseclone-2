@@ -362,7 +362,7 @@ e.preventDefault();
 	  
 	 
   }) 
-empty();
+empty(e);
 
 
 
