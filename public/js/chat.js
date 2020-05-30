@@ -344,34 +344,22 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
     text: document.querySelector('input[name="message"]').value,
 
 
-document.querySelector('input[name="message"]').value='';
+
 	  
 	  
-  }, function() {
+  }), function() {
     document.querySelector('input[name="message"]').value = '';
 
 	  
 	  
 	 
-  })
+  }
 })
 
 
 
 
-document.querySelector('input[name="message"]').addEventListener('onkeypress', function(e) {
-  e.preventDefault();
 
-  socket.emit("type", {
-    text: "is typing"
-
-	  
-	   
-  })
-    
-
-	 
-  })
 
 
 
