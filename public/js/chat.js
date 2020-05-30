@@ -147,6 +147,64 @@ socket.on('newMessage', function(message) {
 });
 
 
+socket.on('newMessages', function(message) {
+	b=message.from;
+	    if(block.indexOf(b) > -1) {
+    console.log('error');
+         
+      }
+	else{
+  const formattedTime = moment(message.createdAt).format('LT');
+  const template = document.querySelector('#message-template').innerHTML;
+  const html = Mustache.render(template, {
+    
+    from: message.from,
+    text: message.from,
+ color:message.color,
+	  
+	  links:message.links,
+	  
+    createdAt: formattedTime
+  });
+
+  const div = document.createElement('div');
+  div.innerHTML = html
+
+  document.querySelector('#messages').appendChild(div);
+  scrollToBottom();
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 socket.on('imgMessage', function(message) {
 	b=message.from;
