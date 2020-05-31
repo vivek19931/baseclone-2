@@ -303,6 +303,9 @@ socket.on('whisper', function(message) {
 	
 })
 });
+else{
+	console.log('error')
+}
 
 				
 		
