@@ -1,6 +1,6 @@
 
 let socket = io();
-var e;
+
 
 function scrollToBottom() {
   let messages = document.querySelector('#messages').lastElementChild;
@@ -362,13 +362,7 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
   })
 
 
-function empty(e){
-	e.preventDefault();
-	
-	document.querySelector('input[name="message"]').value="";
-}
 
-empty(e);
 	
 
 
