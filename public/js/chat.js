@@ -1,5 +1,6 @@
 
 let socket = io();
+var e;
 
 function scrollToBottom() {
   let messages = document.querySelector('#messages').lastElementChild;
