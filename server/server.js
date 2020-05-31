@@ -71,7 +71,7 @@ io.on('connection', (socket) => {
     io.to(params.room).emit('updateUsersList', users.getUserList(params.room));
     socket.emit('newMessage', generateMessage('Admin', `Welocome to ${params.room}!`));
 
-    socket.broadcast.to(params.room).emit('newMessages', generateMessage(`${params.name} joined`));
+    socket.broadcast.to(params.room).emit('newMessage', generateMessage(`${params.name} joined`));
 
     callback();
   })
