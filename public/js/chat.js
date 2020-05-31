@@ -299,8 +299,8 @@ socket.on('whisper', function(message) {
 
   document.querySelector('#messages').appendChild(div);
   scrollToBottom();
-	}
-})
+	})
+});
 
 				
 		
@@ -329,14 +329,14 @@ socket.on('whisper', function(message) {
 	
 		
 		
-		else{
+		else  {
 	
 		
   const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
     from: message.nick,
-    text: message.msg,
+    text: message.msg, 
 	  image:message.msg,
     createdAt: formattedTime
   });
