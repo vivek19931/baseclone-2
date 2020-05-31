@@ -279,7 +279,7 @@ socket.on('whisper', function(message) {
 	if (l=paramsname){
 		console.log('error');
 	}
-	else{
+	else if {
 	
 	if(link.substr(0, 13)==='https://www.yo')
 		
