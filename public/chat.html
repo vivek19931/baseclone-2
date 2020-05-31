@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, inital-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/css/styles.css">
   </head>
+  <script>
+  
+  
+  function submit() {
+  
+ document.getElementById("message-form").reset();
+}
+  </script>
   <body class="chat">
 
     <div class="chat__sidebar">
@@ -27,7 +35,7 @@
           
        
            <input name="space" type="hidden" placeholder="Send Image Link Here" autofocus autocomplete="off" value="" onfocus="this.value=''" value="Blabla"/>
-          <button id="submit-btn">Send</button>
+          <button id="submit-btn"  onclick="submit()" value="Reset form">Send</button>
      
           
         </form>
