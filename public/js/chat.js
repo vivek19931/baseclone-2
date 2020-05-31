@@ -11,6 +11,7 @@ socket.on('connect', function() {
   let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
   let paramsname=params.name;
+	let room=params.room;
 	
 
   
@@ -265,9 +266,10 @@ socket.on('imgMessage', function(message) {
 
 
 socket.on('whisper', function(message) {
-	b=message.from;
+	b=message.nick;
 	    if(block.indexOf(b) > -1) {
     console.log('error');
+		    console.log(paramsname);
          
       }
 	else{
