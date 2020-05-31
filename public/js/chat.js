@@ -270,7 +270,7 @@ socket.on('imgMessage', function(message) {
 socket.on('whisper', function(message) {
 	b=message.nick;
 	l=message.msg;
-	var link=l.trim()
+	var link=l.trim();
 	    if(block.indexOf(b) > -1) {
     console.log('error');
 		    
