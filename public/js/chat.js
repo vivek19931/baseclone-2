@@ -1,6 +1,6 @@
 
 let socket = io();
-var paramsname;
+let paramsname;
 
 
 function scrollToBottom() {
@@ -11,7 +11,7 @@ var block=[];
 socket.on('connect', function() {
   let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
-  let paramsname=params.name;
+   paramsname=params.name;
 	let room=params.room;
 	
 
