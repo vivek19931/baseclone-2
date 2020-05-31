@@ -279,6 +279,7 @@ socket.on('whisper', function(message) {
 	if (l=paramsname){
 		console.log('error');
 	}
+	else{
 	
 	if(link.substr(0, 13)==='https://www.yo')
 		
@@ -301,11 +302,9 @@ socket.on('whisper', function(message) {
   document.querySelector('#messages').appendChild(div);
   scrollToBottom();
 	
-})
-});
-else{
-	console.log('error')
 }
+	}
+});
 
 				
 		
