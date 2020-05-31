@@ -269,12 +269,19 @@ socket.on('imgMessage', function(message) {
 
 socket.on('whisper', function(message) {
 	b=message.nick;
+	l=message.msg;
 	    if(block.indexOf(b) > -1) {
     console.log('error');
 		    
          
       }
-	else{
+	if (l=paramsnam){
+		console.log('error');
+	}
+	
+		
+		
+		else{
 	
 		
   const formattedTime = moment(message.createdAt).format('LT');
