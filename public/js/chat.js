@@ -281,7 +281,7 @@ socket.on('whisper', function(message) {
 	}
 	
 	
-	if(link.substr(0, 13)==='https://www.yo')
+	if(link.substr(0, 14)==='https://www.yo')
 		
 	{
 				
