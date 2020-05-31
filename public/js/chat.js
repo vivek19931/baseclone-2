@@ -270,6 +270,7 @@ socket.on('imgMessage', function(message) {
 socket.on('whisper', function(message) {
 	b=message.nick;
 	l=message.msg;
+	var link=l.trim()
 	    if(block.indexOf(b) > -1) {
     console.log('error');
 		    
@@ -278,7 +279,7 @@ socket.on('whisper', function(message) {
 	if (l=paramsname){
 		console.log('error');
 	}
-	var link=l.trim()
+	
 	if(link.substr(0, 13)==='https://www.yo')
 		
 	{
@@ -299,7 +300,7 @@ socket.on('whisper', function(message) {
 
   document.querySelector('#messages').appendChild(div);
   scrollToBottom();
-	})
+	}
 });
 
 				
