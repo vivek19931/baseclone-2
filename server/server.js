@@ -69,7 +69,7 @@ io.on('connection', (socket) => {
     users.addUser(socket.id, params.name, params.room,color);
 
     io.to(params.room).emit('updateUsersList', users.getUserList(params.room));
-    socket.emit('newMessage', generateMessage('Admin', `Welocome to ${params.room}!`));
+    socket.emit('newMessage', generateMessage( `Welocome to ${params.room}!`));
 
     socket.broadcast.to(params.room).emit('newMessage', generateMessage(`${params.name} joined`));
 
@@ -77,7 +77,8 @@ io.on('connection', (socket) => {
   })
 
   socket.on('createMessage', (message, callback) => {
-	  	   let user = users.getUser(socket.id);
+	  let user = users.getUser(socket.id);
+	  	   
 	  var z=message.text;
     
 	  
@@ -176,8 +177,11 @@ io.on('connection', (socket) => {
 	  
 	  
 
-   else{
+   else{ 
+	    if(user && isRealString(message.text)){
+	   
         io.to(user.room).emit('newMessage', generateMessage(user.name, message.text,message.image,message.links,user.color));
+	    }
     
     
   }
