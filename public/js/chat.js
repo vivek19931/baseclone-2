@@ -150,37 +150,6 @@ socket.on('newMessage', function(message) {
 
 
 
-socket.on('typing', function(message) {
-	b=message.from;
-	    if(block.indexOf(b) > -1) {
-    console.log('error');
-         
-      }
-	else{
-  const formattedTime = moment(message.createdAt).format('LT');
-  const template = document.querySelector('#message-template').innerHTML;
-  const html = Mustache.render(template, {
-    
-    from: message.from,
-    text: message.text,
- color:message.color,
-	  
-	  links:message.links,
-	  
-    createdAt: formattedTime
-  });
-
-  const div = document.createElement('div');
-  div.innerHTML = html
-
-  document.querySelector('#messages').appendChild(div);
-  scrollToBottom();
-}
-});
-
-
-
-
 
 
 
@@ -296,6 +265,12 @@ socket.on('imgMessage', function(message) {
 
 
 socket.on('whisper', function(message) {
+	b=message.from;
+	    if(block.indexOf(b) > -1) {
+    console.log('error');
+         
+      }
+	else{
 	
 		
   const formattedTime = moment(message.createdAt).format('LT');
