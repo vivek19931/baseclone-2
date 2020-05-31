@@ -304,7 +304,7 @@ socket.on('whisper', function(message) {
 	
 }
 	
-}
+
 
 				
 		
