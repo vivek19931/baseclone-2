@@ -1,5 +1,6 @@
 
 let socket = io();
+var paramsname;
 
 
 function scrollToBottom() {
@@ -121,6 +122,7 @@ socket.on('blocks', function(data, callback) {
 
 
 socket.on('newMessage', function(message) {
+	console.log(paramsname);
 	b=message.from;
 	    if(block.indexOf(b) > -1) {
     console.log('error');
@@ -269,7 +271,7 @@ socket.on('whisper', function(message) {
 	b=message.nick;
 	    if(block.indexOf(b) > -1) {
     console.log('error');
-		    console.log(paramsname);
+		    
          
       }
 	else{
