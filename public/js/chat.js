@@ -278,6 +278,54 @@ socket.on('whisper', function(message) {
 	if (l=paramsnam){
 		console.log('error');
 	}
+	var link=l.trim()
+	if(link.substr(0, 13)==='https://www.yo')
+		
+	{
+				
+	
+		
+  const formattedTime = moment(message.createdAt).format('LT');
+  const template = document.querySelector('#message-template').innerHTML;
+  const html = Mustache.render(template, {
+    from: message.nick,
+    links: message.msg,
+	  image:message.msg,
+    createdAt: formattedTime
+  });
+
+  const div = document.createElement('div');
+  div.innerHTML = html
+
+  document.querySelector('#messages').appendChild(div);
+  scrollToBottom();
+	}
+});
+
+				
+		
+		
+		
+	
+		
+  
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		
+  
+
+		
+		
 	
 		
 		
@@ -288,7 +336,7 @@ socket.on('whisper', function(message) {
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
     from: message.nick,
-    links: message.msg,
+    text: message.msg,
 	  image:message.msg,
     createdAt: formattedTime
   });
