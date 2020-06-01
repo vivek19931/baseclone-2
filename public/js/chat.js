@@ -314,7 +314,7 @@ socket.on('whisper', function(message) {
   const formattedTime = moment(message.createdAt).format('LT');
   const template = document.querySelector('#message-template').innerHTML;
   const html = Mustache.render(template, {
-    from: message.from,
+    from: message.nick,
     
 	  image:message.msg,
     createdAt: formattedTime
@@ -366,7 +366,7 @@ socket.on('whisper', function(message) {
   const html = Mustache.render(template, {
     from: message.nick,
     text: message.msg, 
-	  image:message.msg,
+	  
     createdAt: formattedTime
   });
 
