@@ -304,6 +304,31 @@ socket.on('whisper', function(message) {
 	
 }
 	
+	
+		if(link.substr(0, 5)==='https')
+		
+	{
+				
+	
+		
+  const formattedTime = moment(message.createdAt).format('LT');
+  const template = document.querySelector('#message-template').innerHTML;
+  const html = Mustache.render(template, {
+    from: message.from,
+    
+	  image:message.msg,
+    createdAt: formattedTime
+  });
+
+  const div = document.createElement('div');
+  div.innerHTML = html
+
+  document.querySelector('#messages').appendChild(div);
+  scrollToBottom();
+	
+}
+	
+	
 
 
 				
