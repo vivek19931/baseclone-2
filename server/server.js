@@ -244,7 +244,7 @@ io.on('connection', (socket) => {
 	  console.log(y);
 	  if(!socket.nickname) return;
 	  delete usera[socket.nickname];
-	  io.emit('remove',(y));
+	  
 	
 	
 
