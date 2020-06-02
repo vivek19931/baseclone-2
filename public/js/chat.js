@@ -82,8 +82,8 @@ socket.on('updateUsersList', function (users) {
   let ol = document.createElement('ol');
 
   users.forEach(function (user) {
-	  var x=user.color;
-	  console.log(x);
+	  
+	  
     let li = document.createElement('li');
     li.innerHTML =
 	    user;
@@ -276,7 +276,7 @@ socket.on('whisper', function(message) {
 		    
          
       }
-	if (l=paramsname){
+	if (l==paramsname){
 		console.log('error');
 	}
 	
