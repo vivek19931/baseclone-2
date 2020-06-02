@@ -379,6 +379,13 @@ socket.on('whisper', function(message) {
 });
 
 
+socket.on('empty', function(message) {
+	
+	
+	document.querySelector('input[name="message"]').value = '';
+});
+
+
 
 
 
