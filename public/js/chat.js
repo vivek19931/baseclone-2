@@ -305,7 +305,7 @@ socket.on('whisper', function(message) {
 }
 	
 	
-		if(link.substr(0, 5)==='https')
+		if( link.substring(link.length - 4, link.length)==='.gif')
 		
 	{
 				
