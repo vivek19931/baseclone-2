@@ -379,11 +379,6 @@ socket.on('whisper', function(message) {
 });
 
 
-socket.on('empty', function(message) {
-	
-	
-	document.querySelector('input[name="message"]').value = '';
-});
 
 
 
@@ -430,6 +425,15 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 	  
 	  
   })
+
+
+
+socket.on('empty', function(message) {
+	
+	
+	document.querySelector('input[name="message"]').value = '';
+})
+
 
  
 
