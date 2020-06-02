@@ -1,6 +1,6 @@
 
 let socket = io();
-let paramsname;
+var paramsname;
 
 
 function scrollToBottom() {
@@ -269,14 +269,14 @@ socket.on('imgMessage', function(message) {
 
 socket.on('whisper', function(message) {
 	b=message.nick;
-	o=message.msg;
-	var link=o.trim();
+	l=message.msg;
+	var link=l.trim();
 	    if(block.indexOf(b) > -1) {
     console.log('error');
 		    
          
       }
-	if (o=paramsname) {
+	if (l=paramsname) {
 		console.log('error');
 	}
 	
