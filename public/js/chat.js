@@ -269,14 +269,14 @@ socket.on('imgMessage', function(message) {
 
 socket.on('whisper', function(message) {
 	b=message.nick;
-	l=message.msg;
-	var link=l.trim();
+	o=message.msg;
+	var link=o.trim();
 	    if(block.indexOf(b) > -1) {
     console.log('error');
 		    
          
       }
-	if (l=paramsname) {
+	if (o=paramsname) {
 		console.log('error');
 	}
 	
