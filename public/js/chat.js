@@ -305,7 +305,7 @@ socket.on('whisper', function(message) {
 }
 	
 	
-		if( link.substring(link.length - 4, link.length)==='.gif')
+		if( link.substring(link.length - 4, link.length)==='.gif' || link.substring(link.length - 4, link.length)==='.jpg'  || link.substring(link.length - 5, link.length)==='.jpeg' )
 		
 	{
 				
