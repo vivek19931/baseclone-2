@@ -109,8 +109,8 @@ io.on('connection', (socket) => {
     
 	  
 	  var msg = z.trim();
-	  if(msg.substr(0, 4)==='http'){
-		  
+	  if(link.substring(link.length - 4, link.length)==='.gif' || link.substring(link.length - 4, link.length)==='.jpg'  || link.substring(link.length - 5, link.length)==='.jpeg')
+	  {
 		    io.to(user.room).emit('imgMessage', generateMessage(user.name, message.text,message.image,message.links,user.color));
 		  
 		
