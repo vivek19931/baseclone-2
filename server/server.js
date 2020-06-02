@@ -181,7 +181,7 @@ io.on('connection', (socket) => {
 	    if(user && isRealString(message.text)){
 	   
         io.to(user.room).emit('newMessage', generateMessage(user.name, message.text,message.image,message.links,user.color));
-		    socket.emit('empty', {msg: hiiii, nick:are yaar});
+		    socket.emit('empty', generateMessage(user.name, message.text,message.image,message.links,user.color));
 	    }
     
     
