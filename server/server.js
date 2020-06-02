@@ -109,7 +109,7 @@ io.on('connection', (socket) => {
     
 	  
 	  var msg = z.trim();
-	  if(link.substring(link.length - 4, link.length)==='.gif' || link.substring(link.length - 4, link.length)==='.jpg'  || link.substring(link.length - 5, link.length)==='.jpeg')
+	  if(link.substring(msg.length - 4, msg.length)==='.gif' || msg.substring(msg.length - 4, msg.length)==='.jpg'  || msg.substring(msg.length - 5, msg.length)==='.jpeg')
 	  {
 		    io.to(user.room).emit('imgMessage', generateMessage(user.name, message.text,message.image,message.links,user.color));
 		  
