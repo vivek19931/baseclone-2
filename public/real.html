@@ -12,6 +12,10 @@
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
   let paramsname=params.name;
     console.log(paramsname);
+    function myFunction() {
+  document.getElementById("fill").innerHTML=paramsname;
+}
+    myFunction();
     
     
     
@@ -31,7 +35,7 @@
         </div>
         <div class="form-field">
           <label>Room name</label>
-          <input type="text" name="room" autofocus>
+          <input type="text" name="room" id="fill">
         </div>
         <div class="form-field">
           <button>Join</button>
