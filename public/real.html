@@ -11,11 +11,11 @@
      let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
   var x=params.name;
-    console.log(paramsname);
-    function myFunction() {
+    
+    function myFunction(x) {
   document.getElementById("fill").value=x;
 }
-    myFunction();
+    myFunction(x);
     
     
     
