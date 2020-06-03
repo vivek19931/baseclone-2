@@ -1,5 +1,5 @@
 
-let socket = io();
+
 var paramsname;
 
 
@@ -428,7 +428,7 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 
 
 
-socket.on('empty', function(message) {
+socket.on('value', function(message) {
 	
 	
 	document.querySelector('input[name="name"]').value =paramsname;
