@@ -10,10 +10,10 @@
   <script>
      let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
-  let paramsname=params.name;
+  var x=params.name;
     console.log(paramsname);
     function myFunction() {
-  document.getElementById("fill").value=paramsname;
+  document.getElementById("fill").value=x;
 }
     myFunction();
     
