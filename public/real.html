@@ -9,13 +9,7 @@
   </head>
 
   <body class="centered-form">
-      <script>
-     let searchQuery = window.location.search.substring(1);
-  let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
-        x=params.name;
-        console.log(x);
-        
-         document.querySelector('input[name="name"]').value =x;
+      
 
 
 
@@ -37,8 +31,7 @@
     
     
     
-    
-  </script>
+  
     <div class="centered-form__form">
       <form action="/chat.html" id="test">
         <div class="form-field"><h3>Join Chat</h3></div>
