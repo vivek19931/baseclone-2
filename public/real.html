@@ -12,11 +12,11 @@
       <script>
      let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
-  var x=params.name;
+  
     
   
   
-        console.log(x);
+        
 
     
 
@@ -36,7 +36,7 @@
         <div class="form-field"><h3>Join Chat</h3></div>
         <div class="form-field">
           <label>Display name</label>
-          <input type="text" name="name"  id="fill">
+          <input type="text" name="name"  id="fill" value=params.name>
         </div>
         <div class="form-field">
           <label>Room name</label>
