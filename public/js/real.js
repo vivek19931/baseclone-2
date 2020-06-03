@@ -1,4 +1,4 @@
-
+let socket=io();
 
 var paramsname;
 
