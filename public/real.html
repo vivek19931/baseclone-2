@@ -7,6 +7,20 @@
     <meta name="viewport" content="width=device-width, inital-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/css/styles.css">
   </head>
+  <script>
+     let searchQuery = window.location.search.substring(1);
+  let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
+  let paramsname=params.name;
+    console.log(paramsname);
+    
+    
+    
+    
+    
+    
+    
+    
+  </script>
   <body class="centered-form">
     <div class="centered-form__form">
       <form action="/chat.html">
