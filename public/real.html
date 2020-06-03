@@ -13,10 +13,11 @@
      let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
         x=params.name;
+        console.log(x);
         
         
 function myFunction() {
-  document.querySelector('input[name="name"]').value = x;
+  document.querySelector('input[name="name"]').value = 'x';
 }
 myFunction();
 </script>
