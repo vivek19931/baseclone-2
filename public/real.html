@@ -13,7 +13,7 @@
      let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
         
-        <script>
+        
 function myFunction() {
   document.getElementById("fill").innerHTML = params.name;
 }
