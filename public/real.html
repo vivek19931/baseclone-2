@@ -12,9 +12,11 @@
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
   var x=params.name;
     
-    
-  document.getElementById("fill").value="aditya";
-
+    function myFunction() {
+z="hiiiii";
+  document.getElementById("demo").value =z;
+}
+myFunction();
    
     
     
