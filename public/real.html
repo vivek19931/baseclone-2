@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, inital-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/css/styles.css">
   </head>
-  <script>
+
+  <body class="centered-form">
+      <script>
      let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
   var x=params.name;
@@ -30,13 +32,12 @@ function myFunction() {
     
     
   </script>
-  <body class="centered-form">
     <div class="centered-form__form">
       <form action="/chat.html" id="test">
         <div class="form-field"><h3>Join Chat</h3></div>
         <div class="form-field">
           <label>Display name</label>
-          <input type="text" name="name"  id="fill" value="hiiiiiii">
+          <input type="text" name="name"  id="fill" value="h>
         </div>
         <div class="form-field">
           <label>Room name</label>
