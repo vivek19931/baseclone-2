@@ -276,13 +276,13 @@ socket.on('whisper', function(message) {
 		    
          
       }
-	if (l=paramsname) {
+	else if (l=paramsname) {
 		console.log('error');
 		window.stop();
 	}
 	
 	
-	if(link.substr(0, 14)==='https://www.yo')
+	else if(link.substr(0, 14)==='https://www.yo')
 		
 	{
 				
@@ -306,7 +306,7 @@ socket.on('whisper', function(message) {
 }
 	
 	
-		if( link.substring(link.length - 4, link.length)==='.gif' || link.substring(link.length - 4, link.length)==='.jpg'  || link.substring(link.length - 5, link.length)==='.jpeg' )
+		else if( link.substring(link.length - 4, link.length)==='.gif' || link.substring(link.length - 4, link.length)==='.jpg'  || link.substring(link.length - 5, link.length)==='.jpeg' )
 		
 	{
 				
