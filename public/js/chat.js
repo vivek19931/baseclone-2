@@ -282,7 +282,7 @@ socket.on('whisper', function(message) {
 	}
 	
 	
-	else if(link.substr(0, 14)==='https://www.yo')
+	 if(link.substr(0, 14)==='https://www.yo')
 		
 	{
 				
@@ -306,7 +306,7 @@ socket.on('whisper', function(message) {
 }
 	
 	
-		else if( link.substring(link.length - 4, link.length)==='.gif' || link.substring(link.length - 4, link.length)==='.jpg'  || link.substring(link.length - 5, link.length)==='.jpeg' )
+		 if( link.substring(link.length - 4, link.length)==='.gif' || link.substring(link.length - 4, link.length)==='.jpg'  || link.substring(link.length - 5, link.length)==='.jpeg' )
 		
 	{
 				
