@@ -275,11 +275,11 @@ socket.on('whisper', function(message) {
     console.log('error');
 		    
          
-      }
+      };
 	if (l=paramsname) {
 		console.log('error');
 		window.stop();
-	}
+	};
 	
 	
 	if(link.substr(0, 14)==='https://www.yo')
@@ -303,7 +303,7 @@ socket.on('whisper', function(message) {
   document.querySelector('#messages').appendChild(div);
   scrollToBottom();
 	
-}
+};
 	
 	
 		if( link.substring(link.length - 4, link.length)==='.gif' || link.substring(link.length - 4, link.length)==='.jpg'  || link.substring(link.length - 5, link.length)==='.jpeg' )
@@ -327,7 +327,7 @@ socket.on('whisper', function(message) {
   document.querySelector('#messages').appendChild(div);
   scrollToBottom();
 	
-}
+};
 	
 	
 
