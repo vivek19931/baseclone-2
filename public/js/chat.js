@@ -277,8 +277,28 @@ socket.on('whisper', function(message) {
          
       }
 	 if (l=paramsname) {
-		console.log('error');
-		window.stop();
+		 
+		 
+		 
+		 const formattedTime = moment(message.createdAt).format('LT');
+  const template = document.querySelector('#message-template').innerHTML;
+  const html = Mustache.render(template, {
+    from: "",
+    text: "", 
+	  
+    createdAt: formattedTime
+  });
+
+  const div = document.createElement('div');
+  div.innerHTML = html
+
+  document.querySelector('#messages').appendChild(div);
+  scrollToBottom();
+		
+		 
+		 
+		 
+		 
 	}
 	
 	
