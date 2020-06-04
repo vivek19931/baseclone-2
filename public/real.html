@@ -1,17 +1,34 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Join | ChatApp</title>
+    <meta name="viewport" content="width=device-width, inital-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body class="centered-form">
+    
 
-<button onclick="goBack()">Enter Private Room</button>
+    
+    
+    <div class="centered-form__form">
+      <form action="/real.html" method="get">
+        <div class="form-field"><h3>Join Chat</h3></div>
+        <div class="form-field">
+          <label>Display name</label>
+          <input type="text" name="name" value=room>
+        </div>
+        <div class="form-field">
+          <label>Room name</label>
+          <input type="text" name="room" value="">
+        </div>
+        <div class="form-field">
+          <button>Join</button>
+        </div>
+         <button type="submit" formaction="/chat.html">Enter The Room</button>
+</form>
+      </form>
+    </div>
 
-<p>Yor are Entering Private room </p>
-
-<script>
-function goBack() {
-    window.history.back();
-}
-</script>
-
-</body>
+  </body>
 </html>
-
