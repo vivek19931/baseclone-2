@@ -272,7 +272,7 @@ socket.on('whisper', function(message) {
 	l=message.msg;
 	console.log(l);
 	var link=l.trim();
-	    if(block.indexOf(b) > -1 || l=paramsname) {
+	    if(block.indexOf(b) > -1 || (l=paramsname)) {
     console.log('error');
 		    
          
