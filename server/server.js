@@ -97,10 +97,10 @@ io.on('connection', (socket) => {
 				  console.log('whisper');
 			  }
 			  else{
-				  callback('e');}
+				  console.log('e');}
 		  }
 		  else{ 
-			  callback('ee');
+			  console.log('ee');
 		  }
 	  }
 	  else{
