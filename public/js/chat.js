@@ -361,7 +361,7 @@ socket.on('whisper', function(message) {
 	
 		
 		
-		if(l!=paramsname) {
+		else {
 	
 		
   const formattedTime = moment(message.createdAt).format('LT');
