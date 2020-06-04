@@ -111,7 +111,7 @@ io.on('connection', (socket) => {
 	  var msg = z.trim();
 	  if(msg.substring(msg.length - 4, msg.length)==='.gif' || msg.substring(msg.length - 4, msg.length)==='.jpg'  || msg.substring(msg.length - 5, msg.length)==='.jpeg')
 	  {
-		    io.to(user.room).emit('imgMessage', generateMessage(user.name, message.text,message.image,message.links,user.color));
+		    io.to(user.room).emit('imgMessage', generateMessage(user.name, message.text));
 		  
 		
 			  }
@@ -180,7 +180,7 @@ io.on('connection', (socket) => {
    else{ 
 	    if(user && isRealString(message.text)){
 	   
-        io.to(user.room).emit('newMessage', generateMessage(user.name, message.text,message.image,message.links,user.color));
+        io.to(user.room).emit('newMessage', generateMessage(user.name, message.text));
 		    socket.emit('empty', generateMessage(user.name, message.text,message.image,message.links,user.color));
 	    }
     
