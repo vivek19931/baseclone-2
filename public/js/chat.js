@@ -272,11 +272,14 @@ socket.on('whisper', function(message) {
 	l=message.msg;
 	console.log(l);
 	var link=l.trim();
-	    if(block.indexOf(b) > -1 || (l=paramsname)) {
+	    if(block.indexOf(b) > -1) {
     console.log('error');
 		    
          
       }
+	if(l=paramsname){
+		console.log('error');
+	}
 	 
 	
 	
@@ -358,7 +361,7 @@ socket.on('whisper', function(message) {
 	
 		
 		
-		else {
+		if(l!=paramsname) {
 	
 		
   const formattedTime = moment(message.createdAt).format('LT');
