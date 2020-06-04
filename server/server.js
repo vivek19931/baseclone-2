@@ -191,7 +191,7 @@ io.on('connection', (socket) => {
     
   
   }
-	   socket.emit('value', generateMessage(user.name, message.text,message.image,message.links,user.color));
+	  
   });
 	
 	
