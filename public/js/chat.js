@@ -272,22 +272,13 @@ socket.on('whisper', function(message) {
 	l=message.msg;
 	console.log(l);
 	var link=l.trim();
-	    if(block.indexOf(b) > -1) {
+	    if(block.indexOf(b) > -1 || l=paramsname) {
     console.log('error');
 		    
          
       }
-	 if (l=paramsname) {
-		 
-		 
-		 
-	console.log('error');
-		
-		 
-		 
-		 
-		 
-	}
+	 
+	
 	
 	
 	 if(link.substr(0, 14)==='https://www.yo')
