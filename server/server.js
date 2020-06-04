@@ -94,7 +94,7 @@ io.on('connection', (socket) => {
 			
 				    socket.emit('blocks', {msg: msg, nick: socket.nickname});
 				  socket.emit('whisper', {msg: msg, nick: socket.nickname});
-				    socket.emit('empty', generateMessage(msg: msg, nick: socket.nickname));
+				    socket.emit('empty', generateMessage(user.name, message.text,message.image,message.links,user.color));
 				  console.log('whisper');
 			  }
 			  else{
