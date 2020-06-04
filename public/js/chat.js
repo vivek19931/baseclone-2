@@ -12,7 +12,7 @@ socket.on('connect', function() {
   let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
    paramsname=params.name;
-	let room=params.room;
+	
 	
 
   
@@ -122,7 +122,7 @@ socket.on('blocks', function(data, callback) {
 
 
 socket.on('newMessage', function(message) {
-	console.log(paramsname);
+	
 	b=message.from;
 	    if(block.indexOf(b) > -1) {
     console.log('error');
@@ -135,9 +135,9 @@ socket.on('newMessage', function(message) {
     
     from: message.from,
     text: message.text,
- color:message.color,
+ 
 	  
-	  links:message.links,
+	  
 	  
     createdAt: formattedTime
   });
@@ -200,7 +200,7 @@ socket.on('imgMessage', function(message) {
 	  color:message.color,
     
 	  image:message.text,
-	  links:message.links,
+	  
 	  
     createdAt: formattedTime
   });
@@ -280,20 +280,7 @@ socket.on('whisper', function(message) {
 		 
 		 
 		 
-		 const formattedTime = moment(message.createdAt).format('LT');
-  const template = document.querySelector('#message-template').innerHTML;
-  const html = Mustache.render(template, {
-    from: "",
-    text: "", 
-	  
-    createdAt: formattedTime
-  });
-
-  const div = document.createElement('div');
-  div.innerHTML = html
-
-  document.querySelector('#messages').appendChild(div);
-  scrollToBottom();
+	console.log('error');
 		
 		 
 		 
