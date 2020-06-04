@@ -278,6 +278,7 @@ socket.on('whisper', function(message) {
       }
 	if (l=paramsname) {
 		console.log('error');
+		window.stop();
 	}
 	
 	
