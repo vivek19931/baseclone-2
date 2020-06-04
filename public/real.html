@@ -7,21 +7,49 @@
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body class="centered-form">
-    
     <script>
-      Webflow="real.html";
-function getParam(name) { name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]"); var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search); return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " ")); }
-Webflow.push(function() {
+      
+      
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  
+  $("#private").val(getParameterByName("room"));
+}
+      
+      
+      getParameterByName(name);
+      
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </script>
 
-  // Auto-populate form fields (text fields only) based on query string
-  // For non-text fields like dropdown/radio/checkbox, please contact me for custom development (http://webflowexpert.com)
-  $('input:text, input[type=text]').each(function() {
-    var paramValue = getParam(this.id);
-    if(this.value == "" && paramValue != "") this.value = paramValue;
-  });
-
-});
-</script>
+    
+    
+    
+    
+    
+    
+    
+    
     
 
     
@@ -35,7 +63,7 @@ Webflow.push(function() {
         </div>
         <div class="form-field">
           <label>Room name</label>
-          <input type="text" name="room">
+          <input type="text" name="room" id="private">
         </div>
         <div class="form-field">
           <button>Join</button>
