@@ -277,10 +277,7 @@ socket.on('whisper', function(message) {
 		    
          
       }
-	if(l=paramsname){
-		console.log('error');
-	}
-	 
+	
 	
 	
 	
@@ -330,6 +327,12 @@ socket.on('whisper', function(message) {
   scrollToBottom();
 	
 }
+	
+	
+	if(l=paramsname){
+		console.log('error');
+	}
+	 
 	
 	
 
