@@ -334,30 +334,7 @@ socket.on('whisper', function(message) {
   scrollToBottom();
 	}
 
-if(l=paramsname)
-{
-	console.log('error');
-}
 	
-	
-		else {
-	
-		
-  const formattedTime = moment(message.createdAt).format('LT');
-  const template = document.querySelector('#message-template').innerHTML;
-  const html = Mustache.render(template, {
-    from: message.nick,
-    text: message.msg, 
-	  
-    createdAt: formattedTime
-  });
-
-  const div = document.createElement('div');
-  div.innerHTML = html
-
-  document.querySelector('#messages').appendChild(div);
-  scrollToBottom();
-	}
 	
 });
 
