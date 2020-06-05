@@ -278,11 +278,9 @@ socket.on('whisper', function(message) {
 		    
          
       }
-		    if(block.indexOf(l) > -1) {
-    console.log('error');
-		    
-         
-      }
+	if(l=paramsname){
+		console.log('error');
+	}
 	
 	
 	
