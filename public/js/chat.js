@@ -218,19 +218,7 @@ socket.on('imgMessage', function(message) {
 
 
 
-socket.on('test', function(message) {
-	
-	l=message.msg;
-	
-	
 
-	
-	
-	    if(l=paramsname) {
-    window.stop();
-		    
-         
-      }
 	
 			
   
@@ -357,6 +345,65 @@ socket.on('whisper', function(message) {
 	
 	
 });
+
+
+
+
+
+
+socket.on('image', function(message) {
+	b=message.nick;
+	l=message.msg;
+	
+	
+
+	
+	
+	    if(block.indexOf(b) > -1) {
+    console.log('error');
+		    
+         
+      }
+	
+	 var z=message.msg;
+    
+	  
+	  var msg = z.trim();
+	  if(msg.substring(msg.length - 4, msg.length)==='.gif' || msg.substring(msg.length - 4, msg.length)==='.jpg'  || msg.substring(msg.length - 5, msg.length)==='.jpeg')
+	
+			
+  
+
+			
+		
+		 {
+	
+		
+  const formattedTime = moment(message.createdAt).format('LT');
+  const template = document.querySelector('#message-template').innerHTML;
+  const html = Mustache.render(template, {
+    from: message.nick,
+    image: message.msg, 
+	  
+    createdAt: formattedTime
+  });
+
+  const div = document.createElement('div');
+  div.innerHTML = html
+
+  document.querySelector('#messages').appendChild(div);
+  scrollToBottom();
+	}
+	
+	else{
+		console.log('error');
+
+	
+	
+});
+
+
+
 
 
 
