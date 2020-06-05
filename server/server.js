@@ -93,7 +93,7 @@ io.on('connection', (socket) => {
 				  usera[name].emit('whisper', {msg: msg, nick: socket.nickname});
 			
 				    socket.emit('blocks', {msg: msg, nick: socket.nickname});
-				     socket.emit('empty', generateMessage(user.name, message.text));
+				         socket.emit('empty', generateMessage(user.name, message.text,message.image,message.links,user.color));
 				 
 				  
 				  console.log('whisper');
@@ -184,8 +184,7 @@ io.on('connection', (socket) => {
 	    if(user && isRealString(message.text)){
 	   
         io.to(user.room).emit('newMessage', generateMessage(user.name, message.text));
-		      socket.emit('empty', generateMessage(user.name, message.text));
-		  
+		        socket.emit('empty', generateMessage(user.name, message.text,message.image,message.links,user.color));
 	    }
     
     
