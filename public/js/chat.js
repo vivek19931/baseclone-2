@@ -436,11 +436,6 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 
 
 
-socket.on('empty', function(message) {
-	
-	
-	document.querySelector('input[name="message"]').value = '';
-})
 
 
  
