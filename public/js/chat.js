@@ -288,13 +288,16 @@ socket.on('imgMessage', function(message) {
 
 socket.on('whisper', function(message) {
 	b=message.nick;
-	l=message.msg;
+	 var z=message.msg;
+    
+	  
+	  var msg = z.trim();
 	
 	
 
 	
 	
-	    if(block.indexOf(b) > -1) {
+	    if(block.indexOf(b) > -1 || msg.substring(msg.length - 4, msg.length)==='.gif' || msg.substring(msg.length - 4, msg.length)==='.jpg'  || msg.substring(msg.length - 5, msg.length)==='.jpeg' ) {
     console.log('error');
 		    
          
