@@ -269,7 +269,7 @@ socket.on('imgMessage', function(message) {
 
 socket.on('whisper', function(message) {
 	b=message.nick;
-	l=message.msg;
+	
 	
 
 	
@@ -282,57 +282,10 @@ socket.on('whisper', function(message) {
 	
 	
 	
-	var link=l.trim();
-	 if(link.substr(0, 14)==='https://www.yo')
-		
-	{
-				
+	
 	
 		
-  const formattedTime = moment(message.createdAt).format('LT');
-  const template = document.querySelector('#message-template').innerHTML;
-  const html = Mustache.render(template, {
-    from: message.nick,
-    links: message.msg,
-	  
-    createdAt: formattedTime
-  });
 
-  const div = document.createElement('div');
-  div.innerHTML = html
-
-  document.querySelector('#messages').appendChild(div);
-  scrollToBottom();
-	
-}
-	
-	var link=l.trim();
-		 if( link.substring(link.length - 4, link.length)==='.gif' || link.substring(link.length - 4, link.length)==='.jpg'  || link.substring(link.length - 5, link.length)==='.jpeg' )
-		
-	{
-				
-	
-		
-  const formattedTime = moment(message.createdAt).format('LT');
-  const template = document.querySelector('#message-template').innerHTML;
-  const html = Mustache.render(template, {
-    from: message.nick,
-    
-	  image:message.msg,
-    createdAt: formattedTime
-  });
-
-  const div = document.createElement('div');
-  div.innerHTML = html
-
-  document.querySelector('#messages').appendChild(div);
-  scrollToBottom();
-	
-}
-	
-	
-	
-	 
 	
 	
 
