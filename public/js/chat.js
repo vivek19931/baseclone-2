@@ -346,6 +346,7 @@ socket.on('image', function(message) {
 		    
          
       }
+	else{
 	
 	 var z=message.msg;
     
@@ -377,8 +378,7 @@ socket.on('image', function(message) {
   scrollToBottom();
 	}
 	
-	else{
-		console.log('error');
+	
 	}
 
 	
