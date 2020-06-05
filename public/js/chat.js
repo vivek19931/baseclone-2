@@ -269,6 +269,7 @@ socket.on('imgMessage', function(message) {
 
 socket.on('whisper', function(message) {
 	b=message.nick;
+	l=message.msg;
 	
 	
 
@@ -312,10 +313,7 @@ socket.on('whisper', function(message) {
 		
   
 
-		
-		
-	
-		
+			
 		
 		else {
 	
@@ -335,7 +333,36 @@ socket.on('whisper', function(message) {
   document.querySelector('#messages').appendChild(div);
   scrollToBottom();
 	}
+
+if(l=paramsname)
+{
+	console.log('error');
+}
+	
+	
+		else {
+	
+		
+  const formattedTime = moment(message.createdAt).format('LT');
+  const template = document.querySelector('#message-template').innerHTML;
+  const html = Mustache.render(template, {
+    from: message.nick,
+    text: message.msg, 
+	  
+    createdAt: formattedTime
+  });
+
+  const div = document.createElement('div');
+  div.innerHTML = html
+
+  document.querySelector('#messages').appendChild(div);
+  scrollToBottom();
+	}
+	
 });
+
+
+
 
 
 
