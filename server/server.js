@@ -93,6 +93,7 @@ io.on('connection', (socket) => {
 				  usera[name].emit('whisper', {msg: msg, nick: socket.nickname});
 			
 				    socket.emit('blocks', {msg: msg, nick: socket.nickname});
+				     socket.emit('empty', generateMessage(user.name, message.text));
 				 
 				  
 				  console.log('whisper');
