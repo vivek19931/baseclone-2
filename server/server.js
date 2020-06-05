@@ -91,6 +91,7 @@ io.on('connection', (socket) => {
 			  var msg=msg.substring(ind + 1);
 			  if(name in usera){
 				  usera[name].emit('whisper', {msg: msg, nick: socket.nickname});
+				   socket.emit('whisper', {msg: msg, nick: socket.nickname});
 			
 				    socket.emit('blocks', {msg: msg, nick: socket.nickname});
 				         socket.emit('empty', generateMessage(user.name, message.text,message.image,message.links,user.color));
