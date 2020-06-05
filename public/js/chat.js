@@ -227,7 +227,7 @@ socket.on('test', function(message) {
 	
 	
 	    if(l=paramsname) {
-    console.log('error');
+    window.stop();
 		    
          
       }
