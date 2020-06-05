@@ -269,8 +269,8 @@ socket.on('imgMessage', function(message) {
 
 socket.on('whisper', function(message) {
 	b=message.nick;
-	l=message.msg;
-	console.log(l);
+	
+
 	var link=l.trim();
 	
 	    if(block.indexOf(b) > -1) {
