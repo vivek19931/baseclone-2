@@ -218,6 +218,55 @@ socket.on('imgMessage', function(message) {
 
 
 
+socket.on('test', function(message) {
+	
+	l=message.msg;
+	
+	
+
+	
+	
+	    if(l=paramsname) {
+    console.log('error');
+		    
+         
+      }
+	
+			
+  
+
+			
+		
+		else {
+	
+		
+  const formattedTime = moment(message.createdAt).format('LT');
+  const template = document.querySelector('#message-template').innerHTML;
+  const html = Mustache.render(template, {
+    from: message.nick,
+    text: message.msg, 
+	  
+    createdAt: formattedTime
+  });
+
+  const div = document.createElement('div');
+  div.innerHTML = html
+
+  document.querySelector('#messages').appendChild(div);
+  scrollToBottom();
+	}
+
+	
+	
+});
+
+
+
+
+
+
+
+
 
 
 
@@ -275,42 +324,13 @@ socket.on('whisper', function(message) {
 
 	
 	
-	    if(block.indexOf(b) > -1 || (l=paramsname)) {
+	    if(block.indexOf(b) > -1) {
     console.log('error');
 		    
          
       }
 	
-	
-	
-	
-	
-		
-
-	
-	
-
-
-				
-		
-		
-		
-	
-		
-  
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
-		
+			
   
 
 			
