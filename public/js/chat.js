@@ -225,28 +225,10 @@ socket.on('imgMessage', function(message) {
 
 			
 		
-		else {
-	
 		
-  const formattedTime = moment(message.createdAt).format('LT');
-  const template = document.querySelector('#message-template').innerHTML;
-  const html = Mustache.render(template, {
-    from: message.nick,
-    text: message.msg, 
-	  
-    createdAt: formattedTime
-  });
 
-  const div = document.createElement('div');
-  div.innerHTML = html
-
-  document.querySelector('#messages').appendChild(div);
-  scrollToBottom();
-	}
-
-	
-	
-});
+		
+  
 
 
 
@@ -397,6 +379,7 @@ socket.on('image', function(message) {
 	
 	else{
 		console.log('error');
+	}
 
 	
 	
