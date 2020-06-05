@@ -115,7 +115,7 @@ io.on('connection', (socket) => {
 	  if(msg.substring(msg.length - 4, msg.length)==='.gif' || msg.substring(msg.length - 4, msg.length)==='.jpg'  || msg.substring(msg.length - 5, msg.length)==='.jpeg')
 	  {
 		    io.to(user.room).emit('imgMessage', generateMessage(user.name, message.text));
-		    socket.emit('empty', generateMessage(user.name, message.text));
+		    
 		  
 		
 			  }
