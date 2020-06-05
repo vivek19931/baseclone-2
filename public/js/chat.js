@@ -297,7 +297,7 @@ socket.on('whisper', function(message) {
 
 	
 	
-	    if(block.indexOf(b) > -1 || msg.substring(msg.length - 4, msg.length)==='.gif' || msg.substring(msg.length - 4, msg.length)==='.jpg'  || msg.substring(msg.length - 5, msg.length)==='.jpeg' ) {
+	    if(block.indexOf(b) > -1 || msg.substring(msg.length - 4, msg.length)==='.gif' || msg.substring(msg.length - 4, msg.length)==='.jpg'  || msg.substring(msg.length - 5, msg.length)==='.jpeg' || msg.substr(0, 14)==='https://www.yo' ) {
     console.log('error');
 		    
          
@@ -370,6 +370,61 @@ socket.on('image', function(message) {
   const html = Mustache.render(template, {
     from: message.nick,
     image: message.msg, 
+	  
+    createdAt: formattedTime
+  });
+
+  const div = document.createElement('div');
+  div.innerHTML = html
+
+  document.querySelector('#messages').appendChild(div);
+  scrollToBottom();
+	}
+	
+	
+	}
+
+	
+	
+});
+
+
+
+
+socket.on('link', function(message) {
+	b=message.nick;
+	l=message.msg;
+	
+	
+
+	
+	
+	    if(block.indexOf(b) > -1) {
+    console.log('error');
+		    
+         
+      }
+	else{
+	
+	 var z=message.msg;
+    
+	  
+	  var msg = z.trim();
+	  if(msg.substr(0, 14)==='https://www.yo')
+	
+			
+  
+
+			
+		
+		 {
+	
+		
+  const formattedTime = moment(message.createdAt).format('LT');
+  const template = document.querySelector('#message-template').innerHTML;
+  const html = Mustache.render(template, {
+    from: message.nick,
+    links: message.msg, 
 	  
     createdAt: formattedTime
   });
