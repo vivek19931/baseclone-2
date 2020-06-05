@@ -91,10 +91,13 @@ io.on('connection', (socket) => {
 			  var msg=msg.substring(ind + 1);
 			  if(name in usera){
 				  socket.emit('blocks', {msg: msg, nick: socket.nickname});
-				  usera[name].emit('test', {msg: msg, nick: socket.nickname});
+				  
+				   usera[name].emit('link', {msg: msg, nick: socket.nickname});
+				  usera[name].emit('image', {msg: msg, nick: socket.nickname});
 				  usera[name].emit('whisper', {msg: msg, nick: socket.nickname});
 				   socket.emit('whisper', {msg: msg, nick: socket.nickname});
-			
+				  socket.emit('link', {msg: msg, nick: socket.nickname});
+				  socket.emit('image', {msg: msg, nick: socket.nickname});
 				    
 				         socket.emit('empty', generateMessage(user.name, message.text,message.image,message.links,user.color));
 				 
