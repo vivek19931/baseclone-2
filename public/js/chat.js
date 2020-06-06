@@ -2,6 +2,7 @@
 let socket = io();
 var paramsname;
 var feedback=document.getElementById('feedback');
+var check;
 
 
 function scrollToBottom() {
@@ -303,7 +304,7 @@ socket.on('whisper', function(message) {
 
 	
 	
-	    if(block.indexOf(b) > -1 || msg.substring(msg.length - 4, msg.length)==='.gif' || msg.substring(msg.length - 4, msg.length)==='.jpg'  || msg.substring(msg.length - 5, msg.length)==='.jpeg' || msg.substr(0, 14)==='https://www.yo'  ) {
+	    if(block.indexOf(b) > -1 || msg.substring(msg.length - 4, msg.length)==='.gif' || msg.substring(msg.length - 4, msg.length)==='.jpg'  || msg.substring(msg.length - 5, msg.length)==='.jpeg' || msg.substr(0, 14)==='https://www.yo'||(z=paramsname)  ) {
     console.log('error');
 		    
          
@@ -401,7 +402,7 @@ socket.on('image', function(message) {
 socket.on('link', function(message) {
 	feedback.innerHTML='';
 	b=message.nick;
-	l=message.msg;
+	
 	
 	
 
