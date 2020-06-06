@@ -304,7 +304,7 @@ socket.on('whisper', function(message) {
 
 	
 	
-	    if(block.indexOf(b) > -1 || msg.substring(msg.length - 4, msg.length)==='.gif' || msg.substring(msg.length - 4, msg.length)==='.jpg'  || msg.substring(msg.length - 5, msg.length)==='.jpeg' || msg.substr(0, 14)==='https://www.yo'||(z=paramsname)  ) {
+	    if(block.indexOf(b) > -1 || msg.substring(msg.length - 4, msg.length)==='.gif' || msg.substring(msg.length - 4, msg.length)==='.jpg'  || msg.substring(msg.length - 5, msg.length)==='.jpeg' || msg.substr(0, 14)==='https://www.yo'||(z==paramsname)  ) {
     console.log('error');
 		    
          
