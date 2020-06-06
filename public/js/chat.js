@@ -1,6 +1,7 @@
 
 let socket = io();
 var paramsname;
+var feedback=document.getElementById('feedback');
 
 
 function scrollToBottom() {
@@ -12,6 +13,7 @@ socket.on('connect', function() {
   let searchQuery = window.location.search.substring(1);
   let params = JSON.parse('{"' + decodeURI(searchQuery).replace(/&/g, '","').replace(/\+/g, ' ').replace(/=/g,'":"') + '"}');
    paramsname=params.name;
+	
 	
 	
 
@@ -496,6 +498,11 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 	  
 	  
   })
+type.addEventListener('keypress',function(){
+	socket.emit('typing', user.name);
+	
+	
+});
 
 
  socket.on('empty', function(message) {
