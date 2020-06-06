@@ -124,6 +124,7 @@ socket.on('blocks', function(data, callback) {
 
 
 socket.on('newMessage', function(message) {
+	feedback.innerHTML='';
 	
 	b=message.from;
 	    if(block.indexOf(b) > -1) {
@@ -482,7 +483,7 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 
   socket.emit("createMessage", {
     text: document.querySelector('input[name="message"]').value,
-	  feedback.innerHTML='',
+	  
 	 
 	  
 	  
@@ -508,7 +509,7 @@ type.addEventListener('keypress',function(){
 
 socket.on('typing',function(data){
 	
-feedback.innerHTML='<p><em>'+data+ 'is typing</em></p>';	
+feedback.innerHTML='<p><em>'+data + 'is typing</em></p>';	
 });
 
 
