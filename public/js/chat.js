@@ -499,7 +499,7 @@ document.querySelector('#submit-btn').addEventListener('click', function(e) {
 	  
   })
 type.addEventListener('keypress',function(){
-	socket.emit('typing', user.name);
+	socket.emit('typing', paramsname);
 	
 	
 });
