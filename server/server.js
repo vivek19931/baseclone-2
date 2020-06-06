@@ -29,11 +29,6 @@ io.on('connection', (socket) => {
 	
 	socket.emit('newMessagee', (socket.id));
 	
-	socket.on('typing', function(data){
-		socket.broadcast.to(user.room).emit('typing', data)
-	
-	
-	});
 	
 	
 	
@@ -131,6 +126,15 @@ io.on('connection', (socket) => {
 		  
 		
 			  }
+		  
+		  
+		  
+		  socket.on('typing', function(data){
+		socket.broadcast.to(user.room).emit('typing', data)
+	
+	
+	});
+	
 	  
 		  
 		
