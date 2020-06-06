@@ -210,12 +210,16 @@ io.on('connection', (socket) => {
   });
 	
 	
-	
 		  socket.on('typing', function(data){
+			  
+			    let user = users.getUser(socket.id);
 		socket.broadcast.to(user.room).emit('typing', data)
 	
 	
 	});
+	
+	
+	
 	
 	
 	
