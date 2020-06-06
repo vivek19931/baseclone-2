@@ -189,6 +189,7 @@ socket.on('newMessage', function(message) {
 
 
 socket.on('imgMessage', function(message) {
+	feedback.innerHTML='';
 	b=message.from;
 	    if(block.indexOf(b) > -1) {
     console.log('error');
@@ -290,8 +291,10 @@ socket.on('imgMessage', function(message) {
 
 
 socket.on('whisper', function(message) {
+	feedback.innerHTML='';
 	b=message.nick;
 	 var z=message.msg;
+	console.log(z);
     
 	  
 	  var msg = z.trim();
@@ -340,6 +343,7 @@ socket.on('whisper', function(message) {
 
 
 socket.on('image', function(message) {
+	feedback.innerHTML='';
 	b=message.nick;
 	l=message.msg;
 	
@@ -395,6 +399,7 @@ socket.on('image', function(message) {
 
 
 socket.on('link', function(message) {
+	feedback.innerHTML='';
 	b=message.nick;
 	l=message.msg;
 	
